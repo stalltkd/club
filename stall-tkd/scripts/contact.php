@@ -1,25 +1,28 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    if(!empty($_POST['contactname']) 
-       &&
-       if(!empty($_POST['contactsurname']) 
-       &&
-       if(!empty($_POST['contactemail']) 
-       &&
-	if(!empty($_POST['contactphone']) 
-       &&
-       if(!empty($_POST['contactmessage'])) {
-	    
-	$to = 'danila.kirilenko@hotmail.com'; // Your e-mail address here.
+    if(!empty($_POST['contactname'])
+ && 
+!empty($_POST['contactsurnamename'])
+ && 
+!empty($_POST['contactemail'])
+ && 
+!empty($_POST['contactphone'])
+ && 
+!empty($_POST['contactmessage'])) 
+{
+	$to = 'kirilenko.danila@gmail.com'; // Your e-mail address here.
 	$body = "\nName: {$_POST['contactname']}
-		\nEmail: {$_POST['contactemail']}
-		\nEmail: {$_POST['contactphone']}
-	\n
-	\n
-	\n
-	\n
-	{$_POST['contactmessage']}\n\n";
-	mail($to, "Message from yoursite.com", $body, "From: {$_POST['contactemail']}"); // E-Mail subject here.
+\nName: {$_POST['contactsurnamename']}
+\nName: {$_POST['contactname']}
+\nPhone: {$_POST['contactphone']}
+\nEmail: {$_POST['contactemail']}
+\nMessege: {$_POST['contactmessage']}
+\n
+\n
+{$_POST['contactmessage']}
+\n
+\n";
+	mail($to, "Заявка на запись в таэквондо клуб "СТАЛЬ"! ", $body, "From: {$_POST['contactemail']}"); // E-Mail subject here.
     }
 }
 ?>
